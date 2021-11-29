@@ -11,19 +11,19 @@ public enum NoodleEnum {
 
     private String type;
 
-    private String foodName;
+    private String noodleName;
 
     public String getType(){
         return type;
     }
 
     public String getNoodlesName(){
-        return foodName;
+        return noodleName;
     }
 
     private NoodleEnum(String type, String foodName){
         this.type = type;
-        this.foodName = foodName;
+        this.noodleName = foodName;
     }
 
     public static NoodleEnum getNoodlesByType(String type){

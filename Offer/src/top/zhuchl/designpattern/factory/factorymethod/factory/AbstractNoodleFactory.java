@@ -8,12 +8,11 @@ import top.zhuchl.designpattern.factory.factorymethod.product.AbstractNoodle;
  * @Author AlphaZcl
  * @Date 2021/11/27
  **/
-public interface FoodFactory {
+public abstract class AbstractNoodleFactory {
 
     /**
      *  生产食物
-     * @param type 产品类型
-     * @return 返回一个食品对象
+     * @return 返回一个面条对象
      */
-    public abstract AbstractNoodle process(String type);
+    public abstract AbstractNoodle process();
 }
