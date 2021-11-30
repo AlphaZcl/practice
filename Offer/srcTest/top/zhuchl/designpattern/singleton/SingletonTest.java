@@ -1,5 +1,6 @@
 package top.zhuchl.designpattern.singleton;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.util.concurrent.*;
@@ -24,5 +25,15 @@ public class SingletonTest {
         Singleton2 s1 = f1.get();
         Singleton2 s2 = f2.get();
         System.out.println(s1 == s2);
+    }
+
+    @Test
+    @DisplayName("枚举方式")
+    public void test2(){
+        Singleton8 instacne = Singleton8.INSTACNE;
+        Singleton8 instacne1 = Singleton8.INSTACNE;
+        System.out.println(instacne == instacne1);
+        System.out.println(instacne.hashCode());
+        System.out.println(instacne1.hashCode());
     }
 }

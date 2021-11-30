@@ -1,15 +1,12 @@
-package top.zhuchl.factory;
+package top.zhuchl.designpattern.factory;
 
 
 import org.junit.jupiter.api.Assumptions;
 import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 import top.zhuchl.designpattern.factory.simplefactory.DefaultPizzaSimpleFactory;
 import top.zhuchl.designpattern.factory.simplefactory.pizza.Pizza;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * @Author AlphaZcl
