@@ -11,6 +11,7 @@ import org.junit.jupiter.params.provider.ArgumentsProvider;
 import org.junit.jupiter.params.provider.ArgumentsSource;
 import top.zhuchl.designpattern.adapter.classadapter.ClassAdapter;
 import top.zhuchl.designpattern.adapter.classadapter.ClassAdapterTarget;
+import top.zhuchl.designpattern.adapter.interfaceadapter.Adapter;
 import top.zhuchl.designpattern.adapter.objectadapter.ElectricAdapter;
 import top.zhuchl.designpattern.adapter.objectadapter.Motor;
 import top.zhuchl.designpattern.adapter.objectadapter.OpticalAdapter;
@@ -48,5 +49,13 @@ public class AdapterTest {
         public Stream<? extends Arguments> provideArguments(ExtensionContext extensionContext) throws Exception {
             return Stream.of(new ElectricAdapter(),new OpticalAdapter()).map(Arguments::of);
         }
+    }
+
+    @Test
+    @DisplayName("接口适配器模式")
+    public void testInterfaceAdapterTest(){
+        Adapter adapter = new Adapter();
+        adapter.request2();
+        adapter.request3();
     }
 }
