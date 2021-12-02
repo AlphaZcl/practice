@@ -8,6 +8,8 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.ArgumentsProvider;
 import org.junit.jupiter.params.provider.ArgumentsSource;
+import top.zhuchl.designpattern.proxy.dynamicproxy.cglib.CalculateDao;
+import top.zhuchl.designpattern.proxy.dynamicproxy.cglib.CglibProxyInterceptor;
 import top.zhuchl.designpattern.proxy.dynamicproxy.jdkproxy.CalculateServiceImpl;
 import top.zhuchl.designpattern.proxy.dynamicproxy.jdkproxy.CalculatorProxyFactory;
 import top.zhuchl.designpattern.proxy.dynamicproxy.jdkproxy.ICalculateService;
@@ -53,6 +55,15 @@ public class ProxyTest {
         public Stream<? extends Arguments> provideArguments(ExtensionContext extensionContext) throws Exception {
             return Stream.of(new RealTeacher(),new CalculateServiceImpl()).map(Arguments::of);
         }
+    }
+
+    @Test
+    @DisplayName("cglib动态代理")
+    public void testDynamicProxyCglib(){
+        Object proxyInstance = new CglibProxyInterceptor(new CalculateDao()).getProxyInstance();
+        System.out.println(proxyInstance.getClass().getName());
+        int result = ((CalculateDao) proxyInstance).add(1, 2);
+        System.out.println(result);
     }
 
 }
