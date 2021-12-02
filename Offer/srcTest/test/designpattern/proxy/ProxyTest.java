@@ -1,4 +1,4 @@
-package top.zhuchl.designpattern.proxy;
+package test.designpattern.proxy;
 
 import org.junit.jupiter.api.Assumptions;
 import org.junit.jupiter.api.DisplayName;

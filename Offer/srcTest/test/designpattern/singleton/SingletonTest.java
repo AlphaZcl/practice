@@ -1,7 +1,9 @@
-package top.zhuchl.designpattern.singleton;
+package test.designpattern.singleton;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import top.zhuchl.designpattern.singleton.Singleton2;
+import top.zhuchl.designpattern.singleton.Singleton8;
 
 import java.util.concurrent.*;
 

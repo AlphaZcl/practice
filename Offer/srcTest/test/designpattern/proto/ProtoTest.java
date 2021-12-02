@@ -1,8 +1,12 @@
-package top.zhuchl.designpattern.proto;
+package test.designpattern.proto;
 
 import org.junit.jupiter.api.Test;
+import top.zhuchl.designpattern.proto.ProtoTypeCircle;
+import top.zhuchl.designpattern.proto.ProtoTypeManager;
+import top.zhuchl.designpattern.proto.ProtoTypeShape;
+import top.zhuchl.designpattern.proto.ProtoTypeSquare;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 
 /**
  * @Author AlphaZcl

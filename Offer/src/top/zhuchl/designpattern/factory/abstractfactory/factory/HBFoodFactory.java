@@ -1,9 +1,9 @@
 package top.zhuchl.designpattern.factory.abstractfactory.factory;
 
 import top.zhuchl.designpattern.factory.abstractfactory.product.noodles.HotDryNoodle;
+import top.zhuchl.designpattern.factory.abstractfactory.product.pastry.SteamedBun;
 import top.zhuchl.designpattern.factory.abstractfactory.product.noodles.Noodles;
 import top.zhuchl.designpattern.factory.abstractfactory.product.pastry.Pastry;
-import top.zhuchl.designpattern.factory.abstractfactory.product.pastry.SteamedBun;
 
 /**
  * @Author AlphaZcl

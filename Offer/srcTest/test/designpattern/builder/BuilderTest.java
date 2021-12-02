@@ -1,4 +1,4 @@
-package top.zhuchl.designpattern.builder;
+package test.designpattern.builder;
 
 import org.junit.jupiter.api.extension.ExtensionContext;
 import org.junit.jupiter.params.ParameterizedTest;

@@ -1,4 +1,4 @@
-package top.zhuchl.designpattern.factory;
+package test.designpattern.factory;
 
 import org.junit.jupiter.api.Assumptions;
 import org.junit.jupiter.api.DisplayName;

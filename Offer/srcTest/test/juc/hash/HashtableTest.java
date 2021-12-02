@@ -1,4 +1,4 @@
-package top.zhuchl.juc.hash;
+package test.juc.hash;
 
 
 import org.junit.jupiter.api.DisplayName;

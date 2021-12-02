@@ -1,4 +1,4 @@
-package top.zhuchl.designpattern.adapter;
+package test.designpattern.adapter;
 
 
 import org.junit.jupiter.api.Assumptions;
@@ -19,7 +19,7 @@ import top.zhuchl.designpattern.adapter.twoway.*;
 
 import java.util.stream.Stream;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * @Author AlphaZcl

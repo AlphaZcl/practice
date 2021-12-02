@@ -1,7 +1,7 @@
 package top.zhuchl.designpattern.factory.factorymethod.factory;
 
-import top.zhuchl.designpattern.factory.factorymethod.product.AbstractNoodle;
 import top.zhuchl.designpattern.factory.factorymethod.product.HotDryNoodle;
+import top.zhuchl.designpattern.factory.factorymethod.product.AbstractNoodle;
 
 /**
  * 热干面工厂子类

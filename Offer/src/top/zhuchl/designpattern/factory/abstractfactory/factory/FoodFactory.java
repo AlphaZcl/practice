@@ -1,7 +1,7 @@
 package top.zhuchl.designpattern.factory.abstractfactory.factory;
 
-import top.zhuchl.designpattern.factory.abstractfactory.product.noodles.Noodles;
 import top.zhuchl.designpattern.factory.abstractfactory.product.pastry.Pastry;
+import top.zhuchl.designpattern.factory.abstractfactory.product.noodles.Noodles;
 
 /**
  * 抽象方法接口：食品接口

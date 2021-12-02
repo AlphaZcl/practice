@@ -1,4 +1,4 @@
-package top.zhuchl.juc.main;
+package test.juc.main;
 
 /**
  * @Author AlphaZcl
