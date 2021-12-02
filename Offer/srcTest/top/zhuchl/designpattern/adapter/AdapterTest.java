@@ -15,6 +15,7 @@ import top.zhuchl.designpattern.adapter.interfaceadapter.Adapter;
 import top.zhuchl.designpattern.adapter.objectadapter.ElectricAdapter;
 import top.zhuchl.designpattern.adapter.objectadapter.Motor;
 import top.zhuchl.designpattern.adapter.objectadapter.OpticalAdapter;
+import top.zhuchl.designpattern.adapter.twoway.*;
 
 import java.util.stream.Stream;
 
@@ -57,5 +58,30 @@ public class AdapterTest {
         Adapter adapter = new Adapter();
         adapter.request2();
         adapter.request3();
+    }
+
+    @ParameterizedTest
+    @ArgumentsSource(CustArgumentsProvider.class)
+    @DisplayName("双向适配模式")
+    public void testTwoWayAdapterTest(Object obj){
+        Assumptions.assumingThat(obj instanceof TwoWayTarget,()->{
+            TwoWayAdapter twoWayAdapter = new TwoWayAdapter((TwoWayTarget)obj);
+            String s = twoWayAdapter.specificRequest("目标接口适配适配者接口");
+            System.out.println(s);
+        });
+
+        Assumptions.assumingThat(obj instanceof TwoWayAdaptee,()->{
+            TwoWayAdapter twoWayAdapter = new TwoWayAdapter((TwoWayAdaptee) obj);
+            String s = twoWayAdapter.request("适配者接口适配目标接口");
+            System.out.println(s);
+        });
+    }
+
+    static class CustArgumentsProvider implements ArgumentsProvider{
+
+        @Override
+        public Stream<? extends Arguments> provideArguments(ExtensionContext extensionContext) throws Exception {
+            return Stream.of(new AdapteeRealize(),new TargetRealize()).map(Arguments::of);
+        }
     }
 }
