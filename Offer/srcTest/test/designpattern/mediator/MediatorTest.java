@@ -6,6 +6,10 @@ import top.zhuchl.designpattern.mediator.Buyer;
 import top.zhuchl.designpattern.mediator.EstateMedium;
 import top.zhuchl.designpattern.mediator.Medium;
 import top.zhuchl.designpattern.mediator.Seller;
+import top.zhuchl.designpattern.mediator.singleton.Colleague;
+import top.zhuchl.designpattern.mediator.singleton.ColleagueA;
+import top.zhuchl.designpattern.mediator.singleton.ColleagueB;
+import top.zhuchl.designpattern.mediator.singleton.ConcreteMediator;
 
 /**
  *
@@ -24,5 +28,14 @@ public class MediatorTest {
         estateMedium.register(seller);
         estateMedium.register(buyer);
         seller.sendMessage("buyer","两室一厅诚心出租");
+    }
+
+    @Test
+    @DisplayName("单例模式中介者")
+    public void testSingletonMediator(){
+        Colleague a = new ColleagueA("a");
+        Colleague b = new ColleagueB("b");
+        a.sendMessage("b","搞定它");
+        b.sendMessage("a","搞定了");
     }
 }
